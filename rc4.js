@@ -1,3 +1,4 @@
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
 "use strict";
 
 // Based on RC4 algorithm, as described in
@@ -202,3 +203,5 @@ RC4small.prototype.setStateString = function (stateString) {
 RC4.RC4small = RC4small;
 
 module.exports = RC4;
+
+return module.exports;});

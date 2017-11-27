@@ -1,8 +1,11 @@
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
 /* global describe, it */
 "use strict";
 
-var RC4 = require("../rc4.js");
+var RC4 = require("rc4/rc4.js");
 var assert = require("assert");
+var describe = require("tape-compat").describe;
+var it = require("tape-compat").it;
 
 function sq(x) {
   return x * x;
@@ -187,7 +190,7 @@ describe("χ² tests", function () {
     });
   }
 
-  [1000, 10000, 100000].forEach(function (N) {
+  [1000, 10000].forEach(function (N) {
     [1, 2, 3].forEach(function (n) {
       chisqurareit(N, n);
     });
@@ -232,7 +235,7 @@ describe("random", function () {
     });
   }
 
-  [1000, 10000, 100000].forEach(function (N) {
+  [1000, 10000].forEach(function (N) {
     [1, 2, 3].forEach(function (n) {
       chisqurareit(N, n);
     });
@@ -369,9 +372,11 @@ describe("χ² tests, RC4small", function () {
     });
   }
 
-  [1000, 10000, 100000].forEach(function (N) {
+  [1000, 10000].forEach(function (N) {
     [1, 2, 3].forEach(function (n) {
       chisqurareit(N, n);
     });
   });
 });
+
+return module.exports;});
