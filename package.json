@@ -40,7 +40,8 @@
     "excludes": [
         "test",
         "Makefile",
-        "synopsis.js"
+        "synopsis.js",
+        "test.js"
     ]
   }
 }
